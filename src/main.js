@@ -1,5 +1,14 @@
 import { createApp } from 'vue'
+import Toast, { POSITION } from 'vue-toastification'
 import App from './App.vue'
 import router from './router'
 
-createApp(App).use(router).mount('#app')
+import '@/assets/css/fonts.css'
+import 'animate.css'
+import './index.css'
+import 'vue-toastification/dist/index.css'
+
+const app = createApp(App)
+app.use(router)
+app.use(Toast, { position: POSITION.BOTTOM_RIGHT })
+app.mount('#app')
